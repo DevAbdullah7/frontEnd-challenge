@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Varela Round', sans-serif;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('../media/1.jpg');
+    background-position: center;
+    background-size: cover;
+}
+.content {
+    width: 70%;
+    height: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+.infoCard,
+.form {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+}
+.infoCard {
+    position: relative;
+    width: 35%;
+    justify-content: flex-start;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.25) 50%, rgba(0, 0, 0, 0.25) 50%), url('../media/1.jpg');
+    background-size: cover;
+    color: white;
+}
+.infoLogoAndData {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.infoLogoAndData h1 {
+    margin: 5px 0 15px;
+}
+.infoTrack {
+    width: 100%;
+    height: 50%;
+    padding: 100px 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    font-size: 1.25em;
+    font-weight: 500;
+}
+.infoTrack li {
+    margin: 10px 0;
+    list-style: circle;
+}
+.infoLogoAndData img {
+    width: 150px;
+    height: 150px;
+}
+.form {
+    width: 65%;
+    justify-content: space-between;
+    padding: 75px;
+    background: linear-gradient(145deg, rgba(238, 238, 238, 1) 50%, rgba(220, 220, 220, 1) 80%);
+}
+.formInfo {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+.formInfo p {
+    font-size: 1.25em;
+    color: rgba(0, 0, 0, 0.5);
+    cursor: default;
+}
+.formInfo p span {
+    cursor: pointer;
+    transition: 0.25s;
+}
+.formInfo p span:hover {
+    color: rgba(0, 0, 0, 0.75);
+}
+.formInfo p span.activate {
+    font-size: 1.5em;
+    color: #333;
+}
+.formInfo a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.5);
+    transition: 0.5s;
+}
+.formInfo a:hover {
+    color: rgba(0, 0, 0, 1);
+}
+.formData {
+    width: 100%;
+    height: 90%;
+}
+.loginForm {
+    position: relative;
+    width: 100%;
+    height: 87.5%;
+    display: none;
+}
+.loginForm.activate {
+    display: block;
+}
+.singupForm {
+    position: relative;
+    width: 100%;
+    height: 87.5%;
+    display: none;
+}
+.singupForm.activate {
+    display: block;
+}
+input {
+    width: 100%;
+    height: 10%;
+    font-size: 1.1em;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+    border: none;
+    outline: none;
+    background: transparent;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+input::placeholder {
+    color: rgba(0, 0, 0, 0.75);
+    font-size: 1.1em;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+}
+input[type='submit'] {
+    position: relative;
+    width: 150px;
+    height: 45px;
+    border-radius: 25px;
+    background: #333;
+    border-bottom: none;
+    border: 2px solid #eee;
+    outline: 3px solid #333;
+    color: white;
+    font-size: 1.25em;
+    font-weight: 500;
+    cursor: pointer;
+    z-index: 1;
+}
+input[type='submit']:hover {
+    background: linear-gradient(135deg, rgba(33,33,33,1) 50%, rgba(22,22,22,1) 120%);
+}
+.userName, 
+.userCountry, 
+.userEmail, 
+.userPassword {
+    position: relative;
+    width: 100%;
+    margin-top: 25px;
+}
+.loginForm .userPassword a {
+    position: absolute;
+    top: 5px;
+    right: 0;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.5);
+    text-shadow: 0 0 2.5px rgba(0, 0, 0, 0.25);
+    transition: 0.5s;
+}
+.loginForm .userPassword a:hover {
+    color: rgba(0, 0, 0, 1);
+}
+.loginAction {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: rgba(0, 0, 0, 0.25); */
+}
+.loginAction .loginOntherWayes {
+    font-size: 1.15em;
+}
+.loginAction .loginOntherWayes span {
+    margin-right: 10px;
+    color: rgba(0, 0, 0, 0.5);
+    cursor: default;
+}
+.loginAction .loginOntherWayes .google {
+    margin-right: 5px;
+    font-size: 1.5em;
+    text-decoration: none;
+    color: red;
+    transition: 0.5s;
+}
+.loginAction .loginOntherWayes .twitter {
+    font-size: 1.65em;
+    text-decoration: none;
+    color: #0099ff;
+    transition: 0.5s;
+}
+.loginAction .loginOntherWayes .google:hover,
+.loginAction .loginOntherWayes .twitter:hover {
+    transform: scale(1.25);
+}
